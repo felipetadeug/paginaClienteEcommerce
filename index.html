@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Página - Cliente</title>
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="stylePaginaCliente.css">
+
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="container-fluid principal">
+        <div class="container">
+            <div class="row"> 
+                <!--MENU-->
+                <div class="hidden-xs col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item"><b>DADOS PESSOAIS</b></a>
+                        <a href="#" class="list-group-item"><b>ENDEREÇO</b></a>
+                        <a href="#" class="list-group-item"><b>PEDIDOS</b></a>
+                        <a href="#" class="list-group-item"><b>AUTENTICAÇÃO</b></a>
+                    </div>
+                </div>
+    
+                <!--AUTENTICAÇÃO - REDEFINIR SENHA-->
+                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                    <div class="row blocos">
+                        <h3><b>AUTENTICAÇÃO</b></h3>
+                    </div>
+    
+                    <div class="fundo_cinza">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Senha atual</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Nova senha</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Sua senha deve ter pelo menos:</label>
+                                <br>
+                                <br>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                </svg>
+                                &nbsp;
+                                <label>8 caracteres</label>
+                                <br>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                </svg>
+                                &nbsp;
+                                <label>1 letra minúscula</label>
+                                <br>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                </svg>
+                                &nbsp;
+                                <label>1 número</label>
+                                <br>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                </svg>
+                                &nbsp;
+                                <label>1 letra maiúscula</label>         
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <button type="button" class="btn btn-dark btn_preto4">SALVAR SENHA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--AUTENTICAÇÃO - SENHA-->
+                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                    <div class="row blocos">
+                        <h3><b>AUTENTICAÇÃO</b></h3>
+                    </div>
+
+                    <div class="fundo_cinza">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label><b>Senha</b></label>
+                                <br><label class="fonte_cinza">********************</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <button type="button" class="btn btn-dark btn_preto4">ALTERAR SENHA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DADOS PESSOAIS (LISTAGEM)-->
+                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                    <div class="row blocos">
+                        <h3><b>DADOS PESSOAIS</b></h3>
+                    </div>
+
+                    <div class="fundo_cinza">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>Nome:</label>
+                                <br><label><b>Nome - Usuário</b></label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>Sobrenome:</label>
+                                <br><label><b>Sobrenome - Usuário</b></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>Email:</b></label>
+                                <br><label><b>Email - Usuário</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>CPF:</label>
+                                <br><label><b>CPF - Usuário</b></label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>Gênero:</label>
+                                <br><label><b>Gênero - Usuário</b></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>Data de nascimento:</label>
+                                <br><label><b>Data de nascimento - Usuário</b></label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label>Telefone:</label>
+                                <br><label><b>Telefone - Usuário</b></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <button type="button" class="btn btn-dark btn_preto">EDITAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DADOS PESSOAIS (EDIÇÃO)-->
+                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                    <div class="row blocos">
+                        <h3><b>EDITAR DADOS PESSOAIS</b></h3>
+                    </div>
+
+                    <div class="fundo_cinza">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Nome:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Sobrenome:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Email:</b></label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>CPF:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Gênero:</label>
+                <select name="item" class="form-control">											
+                    <option value="0"></option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Feminino</option>
+                    <option value="2">Outro</option>
+                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Data de nascimento:</label>
+                <input type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Telefone:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2">SALVAR ALTERAÇÕES</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--ENDEREÇOS (LISTAGEM)-->
+                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                    <div class="row blocos">
+                        <h3><b>ENDEREÇOS</b></h3>
+                        <button type="button" class="btn btn-dark btn_preto3">ADICIONAR ENDEREÇO</button>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                        <br><label>CEP</label>
+                        <div class="btn_card_endereco">
+                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                        <br><label>CEP</label>
+                        <div class="btn_card_endereco">
+                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                        <br><label>CEP</label>
+                        <div class="btn_card_endereco">
+                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                        <br><label>CEP</label>
+                        <div class="btn_card_endereco">
+                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--ENDEREÇO (ADIÇÃO)-->
+                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                    <div class="row blocos">
+                        <h3><b>ADICIONAR ENDEREÇO</b></h3>
+                    </div>
+
+                    <div class="fundo_cinza">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>CEP:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Endereço:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Número:</b></label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Complemento:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Bairro:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Cidade:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Estado:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Destinatário:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2">ADICIONAR ENDEREÇO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--ENDEREÇO (EDIÇÃO)-->
+                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                    <div class="row blocos">
+                        <h3><b>EDITAR ENDEREÇO</b></h3>
+                    </div>
+
+                    <div class="fundo_cinza">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>CEP:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Endereço:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Número:</b></label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Complemento:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Bairro:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Cidade:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Estado:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 blocos">
+                                <label>Destinatário:</label>
+                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2">SALVAR ALTERAÇÕES</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
