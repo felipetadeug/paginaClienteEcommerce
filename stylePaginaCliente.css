@@ -1,6 +1,7 @@
 *{
 	font-family: 'Roboto', sans-serif;
     color: black;
+    font-size: 11pt;
 }
 
 .principal{
@@ -32,7 +33,6 @@ label{
 }
 
 .blocos{
-    margin: 0px;
     margin-bottom: 35px;
 }
 
