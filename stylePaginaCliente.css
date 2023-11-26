@@ -109,4 +109,12 @@ label{
     display: none;
 }
 
+#adicionarEndereco{
+    display: none;
+}
+
+#editarEndereco{
+    display: none;
+}
+
 /*comentários*/

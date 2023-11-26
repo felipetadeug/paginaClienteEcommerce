@@ -43,6 +43,12 @@
             <div class="row"> 
                 <!--MENU-->
                 <div class="hidden-xs col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                    <p>
+                        Olá,
+                        <br><b>NOME USUÁRIO!</b>
+                    </p>
+                    <br>
+                    <br>
                     <div class="list-group">
                         <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais')"><b>DADOS PESSOAIS</b></a>
                         <a href="#" class="list-group-item" onclick="trocarFrame('endereco')"><b>ENDEREÇO</b></a>
@@ -182,7 +188,7 @@
                 <div id="endereco" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row blocos">
                         <h3><b>ENDEREÇOS</b></h3>
-                        <button type="button" class="btn btn-dark btn_preto3">ADICIONAR ENDEREÇO</button>
+                        <button type="button" class="btn btn-dark btn_preto3" onclick="trocarFrame('adicionarEndereco')">ADICIONAR ENDEREÇO</button>
                     </div>
 
                     <div class="row">
@@ -191,7 +197,7 @@
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
                             <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
     
@@ -200,7 +206,7 @@
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
                             <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
     
@@ -209,7 +215,7 @@
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
                             <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
     
@@ -218,23 +224,14 @@
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
                             <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
-                            <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                            <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                            <br><label>CEP</label>
-                            <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
                     </div>                   
                 </div>
                 
-                <!--ENDEREÇO (ADIÇÃO)
-                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                <!--ENDEREÇO (ADIÇÃO)-->
+                <div id="adicionarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
                     <div class="row blocos">
                         <h3><b>ADICIONAR ENDEREÇO</b></h3>
                     </div>
@@ -298,15 +295,14 @@
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2">ADICIONAR ENDEREÇO</button>
+                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2" onclick="trocarFrame('endereco')">ADICIONAR ENDEREÇO</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                -->
-
-                <!--ENDEREÇO (EDIÇÃO)
-                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                
+                <!--ENDEREÇO (EDIÇÃO)-->
+                <div id="editarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
                     <div class="row blocos">
                         <h3><b>EDITAR ENDEREÇO</b></h3>
                     </div>
@@ -315,74 +311,74 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>CEP:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Endereço:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Número:</b></label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Complemento:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Bairro:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Cidade:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Estado:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Destinatário:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2">SALVAR ALTERAÇÕES</button>
+                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2" onclick="trocarFrame('endereco')">SALVAR ALTERAÇÕES</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                -->
-
+                
                 <!--PEDIDOS-->
                 <div id="pedidos" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row blocos">
                         <h3><b>PEDIDOS</b></h3>
                     </div>
 
+    
                     <div class="fundo_cinza bloco_pedidos">
                         <div class="row">
                             <div class="col-md-6 col-lg-6 blocos">
@@ -421,6 +417,9 @@
                                 <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
                             </div>
                         </div>
+
+                        <br>
+                        <br>
 
                         <div class="row">
                             <div class="col-md-2 col-lg-2 blocos img-fluid">
@@ -476,6 +475,9 @@
                             </div>
                         </div>
 
+                        <br>
+                        <br>
+
                         <div class="row">
                             <div class="col-md-2 col-lg-2 blocos img-fluid">
                                 <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
@@ -486,10 +488,6 @@
                                 <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
                             </div>
                         </div>
-
-                        <div class="row">
-
-                        </div> 
                     </div>
                 </div>
 
