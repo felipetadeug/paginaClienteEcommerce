@@ -103,14 +103,14 @@
 
                         <div class="row">
                             <div class="col-md-6 col-lg-6 blocos">
-                                <button type="button" class="btn btn-dark btn_preto">EDITAR</button>
+                                <button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarDadosPessoais')">EDITAR</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!--DADOS PESSOAIS (EDIÇÃO)
-                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <!--DADOS PESSOAIS (EDIÇÃO)-->
+                <div id="editarDadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row blocos">
                         <h3><b>EDITAR DADOS PESSOAIS</b></h3>
                     </div>
@@ -126,58 +126,57 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Sobrenome:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Email:</b></label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>CPF:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Gênero:</label>
-                <select name="item" class="form-control">											
-                    <option value="0"></option>
-                    <option value="1">Masculino</option>
-                    <option value="2">Feminino</option>
-                    <option value="2">Outro</option>
-                </select>
+                                <select name="item" class="form-control">											
+                                    <option value="0"></option>
+                                    <option value="1">Masculino</option>
+                                    <option value="2">Feminino</option>
+                                    <option value="2">Outro</option>
+                                </select>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Data de nascimento:</label>
-                <input type="date" class="form-control">
+                                <input type="date" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Telefone:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2">SALVAR ALTERAÇÕES</button>
+                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2" onclick="trocarFrame('dadosPessoais')">SALVAR ALTERAÇÕES</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                -->
+                </div>    
 
                 <!--ENDEREÇOS (LISTAGEM)-->
                 <div id="endereco" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">

@@ -93,4 +93,20 @@ label{
     color: gray;
 }
 
+#endereco{
+    display: none;
+}
+
+#pedidos{
+    display: none;
+}
+
+#autenticacao{
+    display: none;
+}
+
+#editarDadosPessoais{
+    display: none;
+}
+
 /*comentários*/
