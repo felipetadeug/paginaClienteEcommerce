@@ -19,6 +19,22 @@
     <link rel="stylesheet" type="text/css" href="stylePaginaCliente.css">
 
     <meta charset="UTF-8">
+
+    <script>
+        function trocarFrame(nomeFrame) {
+            // Esconde todos os frames
+            var frames = document.getElementsByClassName('frame');
+            for (var i = 0; i < frames.length; i++) {
+                frames[i].style.display = 'none';
+            }
+
+            // Mostra o frame desejado
+            var frame = document.getElementById(nomeFrame);
+            if (frame) {
+                frame.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -28,131 +44,15 @@
                 <!--MENU-->
                 <div class="hidden-xs col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                     <div class="list-group">
-                        <a href="#" class="list-group-item"><b>DADOS PESSOAIS</b></a>
-                        <a href="#" class="list-group-item"><b>ENDEREÇO</b></a>
-                        <a href="#" class="list-group-item"><b>PEDIDOS</b></a>
-                        <a href="#" class="list-group-item"><b>AUTENTICAÇÃO</b></a>
-                    </div>
-                </div>
-
-                <!--PEDIDOS-->
-                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
-                    <div class="row blocos">
-                        <h3><b>PEDIDOS</b></h3>
-                    </div>
-
-                    <div class="fundo_cinza">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Status Pedido (Em Separação/Entregue)</b></label>
-                            </div>
-
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <hr class="blocos"></hr>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Pedido:</b></label><label>&nbsp;123456</label>
-                            </div>
-
-                            <div class="col-md-6 col-lg-6 blocos    ">
-                                <label><b>Endereço:</b></label>
-                                <br><label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                                <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                                <br><label>CEP</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
-                            </div>
-
-                            <div class="col-md-10 col-lg-10 blocos">
-                                <label><b>Nome Produto</b></label>
-                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
-                            </div>
-
-                            <div class="col-md-10 col-lg-10 blocos">
-                                <label><b>Nome Produto</b></label>
-                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <br>
-                    <br>
-
-                    <div class="fundo_cinza">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Status Pedido (Em Separação/Entregue)</b></label>
-                            </div>
-
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <hr class="blocos"></hr>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Pedido:</b></label><label>&nbsp;123456</label>
-                            </div>
-
-                            <div class="col-md-6 col-lg-6 blocos    ">
-                                <label><b>Endereço:</b></label>
-                                <br><label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                                <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                                <br><label>CEP</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
-                            </div>
-
-                            <div class="col-md-10 col-lg-10 blocos">
-                                <label><b>Nome Produto</b></label>
-                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
-                            </div>
-
-                            <div class="col-md-10 col-lg-10 blocos">
-                                <label><b>Nome Produto</b></label>
-                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                        </div> 
+                        <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais')"><b>DADOS PESSOAIS</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco')"><b>ENDEREÇO</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('pedidos')"><b>PEDIDOS</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('autenticacao')"><b>AUTENTICAÇÃO</b></a>
                     </div>
                 </div>
 
                 <!--DADOS PESSOAIS (LISTAGEM)-->
-                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <div id="dadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row blocos">
                         <h3><b>DADOS PESSOAIS</b></h3>
                     </div>
@@ -172,8 +72,8 @@
 
                         <div class="row">
                             <div class="col-md-6 col-lg-6 blocos">
-                                <label>Email:</b></label>
-                                <br><label><b>Email - Usuário</label>
+                                <label>Email:</label>
+                                <br><label><b>Email - Usuário</b></label>
                             </div>
                         </div>
 
@@ -209,7 +109,7 @@
                     </div>
                 </div>
 
-                <!--DADOS PESSOAIS (EDIÇÃO)-->
+                <!--DADOS PESSOAIS (EDIÇÃO)
                 <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
                     <div class="row blocos">
                         <h3><b>EDITAR DADOS PESSOAIS</b></h3>
@@ -277,52 +177,64 @@
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!--ENDEREÇOS (LISTAGEM)-->
-                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <div id="endereco" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row blocos">
                         <h3><b>ENDEREÇOS</b></h3>
                         <button type="button" class="btn btn-dark btn_preto3">ADICIONAR ENDEREÇO</button>
                     </div>
 
-                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
-                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                        <br><label>CEP</label>
-                        <div class="btn_card_endereco">
-                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                            <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                            <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                            <br><label>CEP</label>
+                            <div class="btn_card_endereco">
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                            </div>
                         </div>
-                    </div>
+    
+                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                            <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                            <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                            <br><label>CEP</label>
+                            <div class="btn_card_endereco">
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                            <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                            <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                            <br><label>CEP</label>
+                            <div class="btn_card_endereco">
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                            <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                            <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                            <br><label>CEP</label>
+                            <div class="btn_card_endereco">
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                            </div>
+                        </div>
 
-                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
-                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                        <br><label>CEP</label>
-                        <div class="btn_card_endereco">
-                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                            <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                            <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                            <br><label>CEP</label>
+                            <div class="btn_card_endereco">
+                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
-                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                        <br><label>CEP</label>
-                        <div class="btn_card_endereco">
-                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
-                        <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                        <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                        <br><label>CEP</label>
-                        <div class="btn_card_endereco">
-                            <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2">EDITAR</button>
-                        </div>
-                    </div>
+                    </div>                   
                 </div>
                 
-                <!--ENDEREÇO (ADIÇÃO)-->
+                <!--ENDEREÇO (ADIÇÃO)
                 <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                     <div class="row blocos">
                         <h3><b>ADICIONAR ENDEREÇO</b></h3>
@@ -332,56 +244,56 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>CEP:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Endereço:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Número:</b></label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Complemento:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Bairro:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Cidade:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Estado:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12 blocos">
                                 <label>Destinatário:</label>
-                <input type="text" class="form-control">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
@@ -392,8 +304,9 @@
                         </div>
                     </div>
                 </div>
+                -->
 
-                <!--ENDEREÇO (EDIÇÃO)-->
+                <!--ENDEREÇO (EDIÇÃO)
                 <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                     <div class="row blocos">
                         <h3><b>EDITAR ENDEREÇO</b></h3>
@@ -463,9 +376,126 @@
                         </div>
                     </div>
                 </div>
+                -->
+
+                <!--PEDIDOS-->
+                <div id="pedidos" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
+                    <div class="row blocos">
+                        <h3><b>PEDIDOS</b></h3>
+                    </div>
+
+                    <div class="fundo_cinza bloco_pedidos">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label><b>Status Pedido (Em Separação/Entregue)</b></label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <hr class="blocos"></hr>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label><b>Pedido:</b></label><label>&nbsp;123456</label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos    ">
+                                <label><b>Endereço:</b></label>
+                                <br><label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                                <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                                <br><label>CEP</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2 blocos img-fluid">
+                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
+                            </div>
+
+                            <div class="col-md-10 col-lg-10 blocos">
+                                <label><b>Nome Produto</b></label>
+                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2 blocos img-fluid">
+                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
+                            </div>
+
+                            <div class="col-md-10 col-lg-10 blocos">
+                                <label><b>Nome Produto</b></label>
+                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+
+                    <div class="fundo_cinza bloco_pedidos">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label><b>Status Pedido (Em Separação/Entregue)</b></label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <hr class="blocos"></hr>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 blocos">
+                                <label><b>Pedido:</b></label><label>&nbsp;123456</label>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 blocos    ">
+                                <label><b>Endereço:</b></label>
+                                <br><label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
+                                <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
+                                <br><label>CEP</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2 blocos img-fluid">
+                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
+                            </div>
+
+                            <div class="col-md-10 col-lg-10 blocos">
+                                <label><b>Nome Produto</b></label>
+                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2 blocos img-fluid">
+                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
+                            </div>
+
+                            <div class="col-md-10 col-lg-10 blocos">
+                                <label><b>Nome Produto</b></label>
+                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                        </div> 
+                    </div>
+                </div>
 
                 <!--AUTENTICAÇÃO - SENHA-->
-                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <div id="autenticacao" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row blocos">
                         <h3><b>AUTENTICAÇÃO</b></h3>
                     </div>
@@ -484,9 +514,9 @@
                             </div>
                         </div>
                     </div>
-                </div>   
-                
-                <!--AUTENTICAÇÃO - REDEFINIR SENHA-->
+                </div>
+
+                <!--AUTENTICAÇÃO - REDEFINIR SENHA
                 <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
                     <div class="row blocos">
                         <h3><b>AUTENTICAÇÃO</b></h3>
@@ -565,6 +595,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </div>
 

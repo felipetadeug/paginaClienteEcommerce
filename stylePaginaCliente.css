@@ -32,6 +32,11 @@ label{
     padding: 30px;
 }
 
+.bloco_pedidos{
+    border-style: solid;
+    border-width: 0px 0px 0px 4px;
+}
+
 .blocos{
     margin-bottom: 35px;
 }
