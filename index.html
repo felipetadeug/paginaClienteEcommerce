@@ -41,6 +41,8 @@
                         <a href="#" id="menu_pedidos" class="list-group-item" onclick="trocarFrame('pedidos');adicionarSeletor('menu_pedidos')"><b>PEDIDOS</b></a>
                         <a href="#" id="menu_autenticacao" class="list-group-item" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')"><b>AUTENTICAÇÃO</b></a>
                     </div>
+
+                    <p class="sair">SAIR</p>
                 </div>
 
                 <!--MENU - MOBILE-->
@@ -52,11 +54,13 @@
                     <br>
                     <br>
                     <div class="list-group custom-center">
-                        <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais');ocultarMenuMobile()"><b>DADOS PESSOAIS</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco');ocultarMenuMobile()"><b>ENDEREÇO</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('pedidos');ocultarMenuMobile()"><b>PEDIDOS</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('autenticacao');ocultarMenuMobile()"><b>AUTENTICAÇÃO</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais');ocultarMenuMobile();adicionarSeletor('menu_dadosPessoais')"><b>DADOS PESSOAIS</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco');ocultarMenuMobile();adicionarSeletor('menu_endereco')"><b>ENDEREÇO</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('pedidos');ocultarMenuMobile();adicionarSeletor('menu_pedidos')"><b>PEDIDOS</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('autenticacao');ocultarMenuMobile();adicionarSeletor('menu_autenticacao')"><b>AUTENTICAÇÃO</b></a>
                     </div>
+
+                    <p class="sair custom-center">SAIR</p>
                 </div>
 
                 <!--DADOS PESSOAIS (LISTAGEM)-->

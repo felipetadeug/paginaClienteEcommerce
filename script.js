@@ -28,8 +28,3 @@ function ocultarMenuMobile(){
     var menuMobile = document.getElementById('menuMobile');
     menuMobile.style.display = 'none';
 }
-
-function exibirMenuMobile(){
-    var menuMobile = document.getElementById('menuMobile');
-    menuMobile.style.display = 'block';
-}
