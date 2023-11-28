@@ -20,41 +20,15 @@
 
     <meta charset="UTF-8">
 
-    <script>
-        function trocarFrame(nomeFrame){
-            // Esconde todos os frames
-            var frames = document.getElementsByClassName('frame');
-            for (var i = 0; i < frames.length; i++) {
-                frames[i].style.display = 'none';
-            }
-
-            // Mostra o frame desejado
-            var frame = document.getElementById(nomeFrame);
-            if (frame) {
-                frame.style.display = 'block';
-            }
-        }
-
-        function adicionarSeletor(nomeMenu){
-            var menus = document.getElementsByClassName('list-group-item');
-            for (var i = 0; i < menus.length; i++) {
-                menus[i].classList.remove('bordaMenu');
-            }
-
-            var menuUso = document.getElementById(nomeMenu);
-            if(menuUso){
-                menuUso.classList.add('bordaMenu');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div class="container-fluid principal">
         <div class="container">
             <div class="row"> 
-                <!--MENU-->
-                <div class="hidden-xs col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <!--MENU - PC-->
+                <div class="d-none d-md-block col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                     <p>
                         Olá,
                         <br><b>NOME USUÁRIO!</b>
@@ -69,8 +43,33 @@
                     </div>
                 </div>
 
+                <!--MENU - MOBILE-->
+                <div id="menuMobile" class="d-md-none">
+                    <div class="custom-center">
+                        Olá,
+                        <br><b>NOME USUÁRIO!</b>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="list-group custom-center">
+                        <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais');ocultarMenuMobile()"><b>DADOS PESSOAIS</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco');ocultarMenuMobile()"><b>ENDEREÇO</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('pedidos');ocultarMenuMobile()"><b>PEDIDOS</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('autenticacao');ocultarMenuMobile()"><b>AUTENTICAÇÃO</b></a>
+                    </div>
+                </div>
+
                 <!--DADOS PESSOAIS (LISTAGEM)-->
                 <div id="dadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
+                    <div class="row d-md-none">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                            </svg>
+                            Menu
+                        </p>
+                    </div>
+
                     <div class="row">
                         <h3><b>DADOS PESSOAIS</b></h3>
                     </div>
@@ -130,7 +129,7 @@
                 <!--DADOS PESSOAIS (EDIÇÃO)-->
                 <div id="editarDadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
@@ -207,12 +206,21 @@
 
                 <!--ENDEREÇOS (LISTAGEM)-->
                 <div id="endereco" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                    <div class="row d-none d-md-block">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
                             Voltar
+                        </p>
+                    </div>
+
+                    <div class="row d-md-none">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                            </svg>
+                            Menu
                         </p>
                     </div>
 
@@ -263,7 +271,7 @@
                 <!--ENDEREÇO (ADIÇÃO)-->
                 <div id="adicionarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
                     <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
@@ -343,7 +351,7 @@
                 <!--ENDEREÇO (EDIÇÃO)-->
                 <div id="editarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
                     <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
@@ -422,12 +430,21 @@
                 
                 <!--PEDIDOS-->
                 <div id="pedidos" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                    <div class="row d-none d-md-block">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
                             Voltar
+                        </p>
+                    </div>
+
+                    <div class="row d-md-none">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                            </svg>
+                            Menu
                         </p>
                     </div>
 
@@ -492,12 +509,21 @@
 
                 <!--AUTENTICAÇÃO - SENHA-->
                 <div id="autenticacao" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                    <div class="row d-none d-md-block">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
                             Voltar
+                        </p>
+                    </div>
+
+                    <div class="row d-md-none">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                            </svg>
+                            Menu
                         </p>
                     </div>
 
@@ -524,7 +550,7 @@
                 <!--AUTENTICAÇÃO - REDEFINIR SENHA-->
                 <div id="editarSenha" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
                     <div class="row">
-                        <p class="linkVoltar" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')">
+                        <p class="linkVoltarOuMenu" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>

@@ -127,6 +127,10 @@ label{
     display: none;
 }
 
+#menuMobile{
+    display: none;
+}
+
 .list-group-item:first-child{
     border-top-left-radius: 0;
 }
@@ -135,9 +139,15 @@ label{
     border-bottom-left-radius: 0;
 }
 
-.linkVoltar{
+.linkVoltarOuMenu{
     color: orange;
     text-decoration:none;
     cursor: pointer;
+}
+
+.custom-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /*comentários*/
