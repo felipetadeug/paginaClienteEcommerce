@@ -21,7 +21,7 @@
     <meta charset="UTF-8">
 
     <script>
-        function trocarFrame(nomeFrame) {
+        function trocarFrame(nomeFrame){
             // Esconde todos os frames
             var frames = document.getElementsByClassName('frame');
             for (var i = 0; i < frames.length; i++) {
@@ -32,6 +32,18 @@
             var frame = document.getElementById(nomeFrame);
             if (frame) {
                 frame.style.display = 'block';
+            }
+        }
+
+        function adicionarSeletor(nomeMenu){
+            var menus = document.getElementsByClassName('list-group-item');
+            for (var i = 0; i < menus.length; i++) {
+                menus[i].classList.remove('bordaMenu');
+            }
+
+            var menuUso = document.getElementById(nomeMenu);
+            if(menuUso){
+                menuUso.classList.add('bordaMenu');
             }
         }
     </script>
@@ -50,16 +62,16 @@
                     <br>
                     <br>
                     <div class="list-group">
-                        <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais')"><b>DADOS PESSOAIS</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco')"><b>ENDEREÇO</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('pedidos')"><b>PEDIDOS</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('autenticacao')"><b>AUTENTICAÇÃO</b></a>
+                        <a href="#" id="menu_dadosPessoais" class="list-group-item bordaMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')"><b>DADOS PESSOAIS</b></a>
+                        <a href="#" id="menu_endereco" class="list-group-item" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')"><b>ENDEREÇO</b></a>
+                        <a href="#" id="menu_pedidos" class="list-group-item" onclick="trocarFrame('pedidos');adicionarSeletor('menu_pedidos')"><b>PEDIDOS</b></a>
+                        <a href="#" id="menu_autenticacao" class="list-group-item" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')"><b>AUTENTICAÇÃO</b></a>
                     </div>
                 </div>
 
                 <!--DADOS PESSOAIS (LISTAGEM)-->
                 <div id="dadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row blocos">
+                    <div class="row">
                         <h3><b>DADOS PESSOAIS</b></h3>
                     </div>
 
@@ -117,7 +129,16 @@
 
                 <!--DADOS PESSOAIS (EDIÇÃO)-->
                 <div id="editarDadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row blocos">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Dados Pessoais
+                        </p>
+                    </div>
+
+                    <div class="row">
                         <h3><b>EDITAR DADOS PESSOAIS</b></h3>
                     </div>
 
@@ -186,9 +207,18 @@
 
                 <!--ENDEREÇOS (LISTAGEM)-->
                 <div id="endereco" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row blocos">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Voltar
+                        </p>
+                    </div>
+
+                    <div class="row ">
                         <h3><b>ENDEREÇOS</b></h3>
-                        <button type="button" class="btn btn-dark btn_preto3" onclick="trocarFrame('adicionarEndereco')">ADICIONAR ENDEREÇO</button>
+                        <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('adicionarEndereco')">ADICIONAR ENDEREÇO</button>
                     </div>
 
                     <div class="row">
@@ -232,6 +262,15 @@
                 
                 <!--ENDEREÇO (ADIÇÃO)-->
                 <div id="adicionarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Endereços
+                        </p>
+                    </div>
+
                     <div class="row blocos">
                         <h3><b>ADICIONAR ENDEREÇO</b></h3>
                     </div>
@@ -303,6 +342,15 @@
                 
                 <!--ENDEREÇO (EDIÇÃO)-->
                 <div id="editarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Endereços
+                        </p>
+                    </div>
+
                     <div class="row blocos">
                         <h3><b>EDITAR ENDEREÇO</b></h3>
                     </div>
@@ -374,11 +422,19 @@
                 
                 <!--PEDIDOS-->
                 <div id="pedidos" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row blocos">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Voltar
+                        </p>
+                    </div>
+
+                    <div class="row">
                         <h3><b>PEDIDOS</b></h3>
                     </div>
 
-    
                     <div class="fundo_cinza bloco_pedidos">
                         <div class="row">
                             <div class="col-md-6 col-lg-6 blocos">
@@ -389,7 +445,7 @@
                                 <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
                             </div>
                         </div>
-
+                        
                         <div class="row">
                             <hr class="blocos"></hr>
                         </div>
@@ -406,64 +462,7 @@
                                 <br><label>CEP</label>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
-                            </div>
-
-                            <div class="col-md-10 col-lg-10 blocos">
-                                <label><b>Nome Produto</b></label>
-                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
-                            </div>
-                        </div>
-
-                        <br>
-                        <br>
-
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
-                                <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
-                            </div>
-
-                            <div class="col-md-10 col-lg-10 blocos">
-                                <label><b>Nome Produto</b></label>
-                                <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <br>
-                    <br>
-
-                    <div class="fundo_cinza bloco_pedidos">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Status Pedido (Em Separação/Entregue)</b></label>
-                            </div>
-
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <hr class="blocos"></hr>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <label><b>Pedido:</b></label><label>&nbsp;123456</label>
-                            </div>
-
-                            <div class="col-md-6 col-lg-6 blocos    ">
-                                <label><b>Endereço:</b></label>
-                                <br><label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
-                                <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
-                                <br><label>CEP</label>
-                            </div>
-                        </div>
-
+                        
                         <div class="row">
                             <div class="col-md-2 col-lg-2 blocos img-fluid">
                                 <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
@@ -493,7 +492,16 @@
 
                 <!--AUTENTICAÇÃO - SENHA-->
                 <div id="autenticacao" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row blocos">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Voltar
+                        </p>
+                    </div>
+
+                    <div class="row">
                         <h3><b>AUTENTICAÇÃO</b></h3>
                     </div>
 
@@ -507,14 +515,23 @@
 
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark btn_preto4">ALTERAR SENHA</button>
+                                <button type="button" class="btn btn-dark btn_preto4" onclick="trocarFrame('editarSenha')">ALTERAR SENHA</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!--AUTENTICAÇÃO - REDEFINIR SENHA
-                <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <!--AUTENTICAÇÃO - REDEFINIR SENHA-->
+                <div id="editarSenha" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
+                    <div class="row">
+                        <p class="linkVoltar" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                            Autenticação
+                        </p>
+                    </div>
+
                     <div class="row blocos">
                         <h3><b>AUTENTICAÇÃO</b></h3>
                     </div>
@@ -587,12 +604,11 @@
     
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark btn_preto4">SALVAR SENHA</button>
+                                <button type="button" class="btn btn-dark btn_preto4" onclick="trocarFrame('autenticacao')">SALVAR SENHA</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                -->
+                </div>                
             </div>
         </div>
 
