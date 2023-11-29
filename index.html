@@ -714,7 +714,33 @@
                 </div>                
             </div>
         </div>
-
     </div>
+    
+    <script>
+        // Função para buscar o endereço usando o CEP
+        function buscarEndereco() {
+            var cep = document.getElementById('cep').value.replace(/\D/g, ''); // Obtém o valor do CEP e remove caracteres não numéricos
+    
+            // Faz a requisição à API do ViaCEP
+            fetch('https://viacep.com.br/ws/' + cep + '/json/')
+                .then(response => response.json())
+                .then(data => {
+                    if (!("erro" in data)) {
+                        // Se a API retornar o endereço sem erros, preenche os campos do formulário
+                        document.getElementById('endereco_cliente').value = data.logradouro;
+                        document.getElementById('bairro').value = data.bairro;
+                        document.getElementById('cidade').value = data.localidade;
+                        document.getElementById('estado').value = data.uf;
+                        // Preencha os outros campos conforme necessário
+                    } else {
+                        alert('CEP não encontrado.');
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+    
+        // Adiciona um evento de escuta para buscar o endereço ao digitar o CEP
+        document.getElementById('cep').addEventListener('input', buscarEndereco);
+    </script>
 </body>
 </html>
