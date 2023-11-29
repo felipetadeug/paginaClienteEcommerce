@@ -15,12 +15,12 @@ function trocarFrame(nomeFrame){
 function adicionarSeletor(nomeMenu){
     var menus = document.getElementsByClassName('list-group-item');
     for (var i = 0; i < menus.length; i++) {
-        menus[i].classList.remove('bordaMenu');
+        menus[i].classList.remove('bordaMenuSelecionado');
     }
 
     var menuUso = document.getElementById(nomeMenu);
     if(menuUso){
-        menuUso.classList.add('bordaMenu');
+        menuUso.classList.add('bordaMenuSelecionado');
     }
 }
 

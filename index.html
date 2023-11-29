@@ -3,11 +3,6 @@
 
 <head>
     <title>Página - Cliente</title>
-    <!--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -18,13 +13,15 @@
 
     <link rel="stylesheet" type="text/css" href="stylePaginaCliente.css">
 
+    <link rel="icon" href="user.ico" type="image/x-icon">
+
     <meta charset="UTF-8">
 
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid principal">
+    <div class="container-fluid">
         <div class="container">
             <div class="row"> 
                 <!--MENU - PC-->
@@ -36,13 +33,13 @@
                     <br>
                     <br>
                     <div class="list-group">
-                        <a href="#" id="menu_dadosPessoais" class="list-group-item bordaMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')"><b>DADOS PESSOAIS</b></a>
-                        <a href="#" id="menu_endereco" class="list-group-item" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')"><b>ENDEREÇO</b></a>
+                        <a href="#" id="menu_dadosPessoais" class="list-group-item bordaMenuSelecionado" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')"><b>DADOS PESSOAIS</b></a>
+                        <a href="#" id="menu_endereco" class="list-group-item" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')"><b>ENDEREÇOS</b></a>
                         <a href="#" id="menu_pedidos" class="list-group-item" onclick="trocarFrame('pedidos');adicionarSeletor('menu_pedidos')"><b>PEDIDOS</b></a>
                         <a href="#" id="menu_autenticacao" class="list-group-item" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')"><b>AUTENTICAÇÃO</b></a>
                     </div>
 
-                    <p class="sair">SAIR</p>
+                    <p class="sair fonte_cinza">SAIR</p>
                 </div>
 
                 <!--MENU - MOBILE-->
@@ -55,7 +52,7 @@
                     <br>
                     <div class="list-group custom-center">
                         <a href="#" class="list-group-item" onclick="trocarFrame('dadosPessoais');ocultarMenuMobile();adicionarSeletor('menu_dadosPessoais')"><b>DADOS PESSOAIS</b></a>
-                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco');ocultarMenuMobile();adicionarSeletor('menu_endereco')"><b>ENDEREÇO</b></a>
+                        <a href="#" class="list-group-item" onclick="trocarFrame('endereco');ocultarMenuMobile();adicionarSeletor('menu_endereco')"><b>ENDEREÇOS</b></a>
                         <a href="#" class="list-group-item" onclick="trocarFrame('pedidos');ocultarMenuMobile();adicionarSeletor('menu_pedidos')"><b>PEDIDOS</b></a>
                         <a href="#" class="list-group-item" onclick="trocarFrame('autenticacao');ocultarMenuMobile();adicionarSeletor('menu_autenticacao')"><b>AUTENTICAÇÃO</b></a>
                     </div>
@@ -65,74 +62,74 @@
 
                 <!--DADOS PESSOAIS (LISTAGEM)-->
                 <div id="dadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row d-md-none">
+                    <div class="row d-md-none espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
-                            Menu
+                            MENU
                         </p>
                     </div>
 
-                    <div class="row">
-                        <h3><b>DADOS PESSOAIS</b></h3>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">DADOS PESSOAIS</b></p>
                     </div>
 
                     <div class="fundo_cinza">
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>Nome:</label>
                                 <br><label><b>Nome - Usuário</b></label>
                             </div>
 
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>Sobrenome:</label>
                                 <br><label><b>Sobrenome - Usuário</b></label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>Email:</label>
                                 <br><label><b>Email - Usuário</b></label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>CPF:</label>
                                 <br><label><b>CPF - Usuário</b></label>
                             </div>
 
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>Gênero:</label>
                                 <br><label><b>Gênero - Usuário</b></label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>Data de nascimento:</label>
                                 <br><label><b>Data de nascimento - Usuário</b></label>
                             </div>
 
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label>Telefone:</label>
                                 <br><label><b>Telefone - Usuário</b></label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
-                                <button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarDadosPessoais')">EDITAR</button>
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                <button type="submit" class="btn btn-dark btn_preto" onclick="trocarFrame('editarDadosPessoais')">EDITAR</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!--DADOS PESSOAIS (EDIÇÃO)-->
-                <div id="editarDadosPessoais" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row">
+                <div id="editarDadosPessoais" class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 frame">
+                    <div class="row espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -141,76 +138,78 @@
                         </p>
                     </div>
 
-                    <div class="row">
-                        <h3><b>EDITAR DADOS PESSOAIS</b></h3>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">EDITAR DADOS PESSOAIS</b></p>
                     </div>
 
-                    <div class="fundo_cinza">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label for="nomeCampo" class="form-label">Nome:</label>
-                                <input type="text" class="form-control" id="nomeCampo">
+                    <form action="" method="">
+                        <div class="fundo_cinza">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="nome" class="form-label">Nome:</label>
+                                    <input type="text" class="form-control" id="nome">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="sobrenome" class="form-label">Sobrenome:</label>
+                                    <input type="text" class="form-control" id="sobrenome">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="email" class="form-label">Email:</b></label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="cpf" class="form-label">CPF:</label>
+                                    <input type="text" class="form-control" id="cpf">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="genero" class="form-label">Gênero:</label>
+                                    <select name="item" class="form-control" id="genero">											
+                                        <option value="0"></option>
+                                        <option value="1">Masculino</option>
+                                        <option value="2">Feminino</option>
+                                        <option value="2">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="data_nasc" class="form-label">Data de nascimento:</label>
+                                    <input type="date" class="form-control" id="data_nasc">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="telefone" class="form-label">Telefone:</label>
+                                    <input type="text" class="form-control" id="telefone">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <button type="submit" class="btn btn-dark btn_preto" onclick="trocarFrame('dadosPessoais')">SALVAR ALTERAÇÕES</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Sobrenome:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Email:</b></label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>CPF:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Gênero:</label>
-                                <select name="item" class="form-control">											
-                                    <option value="0"></option>
-                                    <option value="1">Masculino</option>
-                                    <option value="2">Feminino</option>
-                                    <option value="2">Outro</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Data de nascimento:</label>
-                                <input type="date" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Telefone:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2" onclick="trocarFrame('dadosPessoais')">SALVAR ALTERAÇÕES</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>    
 
                 <!--ENDEREÇOS (LISTAGEM)-->
                 <div id="endereco" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row d-none d-md-block">
+                    <div class="row d-none d-md-block espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -219,62 +218,67 @@
                         </p>
                     </div>
 
-                    <div class="row d-md-none">
+                    <div class="row d-md-none espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
-                            Menu
+                            MENU
                         </p>
                     </div>
 
-                    <div class="row ">
-                        <h3><b>ENDEREÇOS</b></h3>
-                        <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('adicionarEndereco')">ADICIONAR ENDEREÇO</button>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">ENDEREÇOS</b></p>
+                    </div>
+
+                    <div class="row espacamentoMenor">
+                        <div>
+                            <button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('adicionarEndereco')">ADICIONAR ENDEREÇO</button>
+                        </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento fundo_cinza card_endereco">
                             <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
-                            <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
+                            <div class="div_card_endereco">
+                                <br><button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
     
-                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento fundo_cinza card_endereco">
                             <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
-                            <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
+                            <div class="div_card_endereco">
+                                <br><button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
     
-                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento fundo_cinza card_endereco">
                             <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
-                            <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
+                            <div class="div_card_endereco">
+                                <br><button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
     
-                        <div class="col-md-6 col-lg-6 blocos fundo_cinza card_endereco">
+                        <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento fundo_cinza card_endereco">
                             <label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
                             <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
                             <br><label>CEP</label>
-                            <div class="btn_card_endereco">
-                                <br><button type="button" class="btn btn-dark col-xs-6 col-sm-6 col-md-6 col-lg-6 btn_preto2" onclick="trocarFrame('editarEndereco')">EDITAR</button>
+                            <div class="div_card_endereco">
+                                <br><button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarEndereco')">EDITAR</button>
                             </div>
                         </div>
                     </div>                   
                 </div>
                 
                 <!--ENDEREÇO (ADIÇÃO)-->
-                <div id="adicionarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
-                    <div class="row">
+                <div id="adicionarEndereco" class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 frame">
+                    <div class="row espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -283,78 +287,109 @@
                         </p>
                     </div>
 
-                    <div class="row blocos">
-                        <h3><b>ADICIONAR ENDEREÇO</b></h3>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">ADICIONAR ENDEREÇO</b></p>
                     </div>
 
-                    <div class="fundo_cinza">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>CEP:</label>
-                                <input type="text" class="form-control">
+                    <form action="" method="">
+                        <div class="fundo_cinza">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="cep" class="form-label">CEP:</label>
+                                    <input type="text" class="form-control" id="cep">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="endereco_cliente" class="form-label">Endereço:</label>
+                                    <input type="text" class="form-control" id="endereco_cliente">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="numero" class="form-label">Número:</b></label>
+                                    <input type="text" class="form-control" id="numero">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="complemento" class="form-label">Complemento:</label>
+                                    <input type="text" class="form-control" id="complemento">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="bairro" class="form-label">Bairro:</label>
+                                    <input type="text" class="form-control" id="bairro">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="cidade" class="form-label">Cidade:</label>
+                                    <input type="text" class="form-control" id="cidade">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="estado" class="form-label">Estado:</label>
+                                    <select name="estado" class="form-control" id="estado">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="dest" class="form-label">Destinatário:</label>
+                                    <input type="text" class="form-control" id="dest">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <button type="submit" class="btn btn-dark btn_preto" onclick="trocarFrame('endereco')">ADICIONAR ENDEREÇO</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Endereço:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Número:</b></label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Complemento:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Bairro:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Cidade:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Estado:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Destinatário:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2" onclick="trocarFrame('endereco')">ADICIONAR ENDEREÇO</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>                    
                 </div>
                 
                 <!--ENDEREÇO (EDIÇÃO)-->
-                <div id="editarEndereco" class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 frame">
-                    <div class="row">
+                <div id="editarEndereco" class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 frame">
+                    <div class="row espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -363,78 +398,109 @@
                         </p>
                     </div>
 
-                    <div class="row blocos">
-                        <h3><b>EDITAR ENDEREÇO</b></h3>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">EDITAR ENDEREÇO</b></p>
                     </div>
 
-                    <div class="fundo_cinza">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>CEP:</label>
-                                <input type="text" class="form-control">
+                    <form action="" method="">
+                        <div class="fundo_cinza">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="cep2" class="form-label">CEP:</label>
+                                    <input type="text" class="form-control" id="cep2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="endereco_cliente2" class="form-label">Endereço:</label>
+                                    <input type="text" class="form-control" id="endereco_cliente2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="numero2" class="form-label">Número:</b></label>
+                                    <input type="text" class="form-control" id="numero2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="complemento2" class="form-label">Complemento:</label>
+                                    <input type="text" class="form-control" id="complemento2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="bairro2" class="form-label">Bairro:</label>
+                                    <input type="text" class="form-control" id="bairro2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="cidade2" class="form-label">Cidade:</label>
+                                    <input type="text" class="form-control" id="cidade2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="estado2" class="form-label">Estado:</label>
+                                    <select name="estado" class="form-control" id="estado2">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="dest2" class="form-label">Destinatário:</label>
+                                    <input type="text" class="form-control" id="dest2">
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <button type="submit" class="btn btn-dark btn_preto" onclick="trocarFrame('endereco')">SALVAR ALTERAÇÕES</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Endereço:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Número:</b></label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Complemento:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Bairro:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Cidade:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Estado:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Destinatário:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark col-xs-12 col-sm-12 col-md-12 col-lg-12 btn_preto2" onclick="trocarFrame('endereco')">SALVAR ALTERAÇÕES</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 
                 <!--PEDIDOS-->
                 <div id="pedidos" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row d-none d-md-block">
+                    <div class="row d-none d-md-block espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -443,40 +509,40 @@
                         </p>
                     </div>
 
-                    <div class="row d-md-none">
+                    <div class="row d-md-none espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
-                            Menu
+                            MENU
                         </p>
                     </div>
 
-                    <div class="row">
-                        <h3><b>PEDIDOS</b></h3>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">PEDIDOS</b></p>
                     </div>
 
                     <div class="fundo_cinza bloco_pedidos">
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label><b>Status Pedido (Em Separação/Entregue)</b></label>
                             </div>
 
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label><b>Status Pagamento (Pagamento Pendente/Pago)</b></label>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <hr class="blocos"></hr>
+                            <hr class="espacamento"></hr>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 blocos">
+                            <div class="ccol-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label><b>Pedido:</b></label><label>&nbsp;123456</label>
                             </div>
 
-                            <div class="col-md-6 col-lg-6 blocos    ">
+                            <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 espacamento">
                                 <label><b>Endereço:</b></label>
                                 <br><label>Rua</label><label>&nbsp;Número</label>,<label>&nbsp;Complemento</label>
                                 <br><label>Bairro</label>&nbsp;-&nbsp;<label>Cidade</label>&nbsp;-&nbsp;<label>Estado</label>
@@ -485,11 +551,11 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
+                            <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2 espacamento img-fluid">
                                 <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
                             </div>
 
-                            <div class="col-md-10 col-lg-10 blocos">
+                            <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 espacamento">
                                 <label><b>Nome Produto</b></label>
                                 <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
                             </div>
@@ -499,11 +565,11 @@
                         <br>
 
                         <div class="row">
-                            <div class="col-md-2 col-lg-2 blocos img-fluid">
+                            <div class="col-md-2 col-lg-2 col-xl-2 col-xxl-2 espacamento img-fluid">
                                 <img src="https://cdn-icons-png.flaticon.com/512/13/13973.png" alt="Produto XPTO" style="width: 60px;">
                             </div>
 
-                            <div class="col-md-10 col-lg-10 blocos">
+                            <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 espacamento">
                                 <label><b>Nome Produto</b></label>
                                 <br><br><label><b>Quantidade:</b> 1 &nbsp;|&nbsp; <b>Total:</b> R$ 123,45</label>
                             </div>
@@ -513,7 +579,7 @@
 
                 <!--AUTENTICAÇÃO - SENHA-->
                 <div id="autenticacao" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row d-none d-md-block">
+                    <div class="row d-none d-md-block espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('dadosPessoais');adicionarSeletor('menu_dadosPessoais')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -522,30 +588,30 @@
                         </p>
                     </div>
 
-                    <div class="row d-md-none">
+                    <div class="row d-md-none espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('menuMobile')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-list" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
-                            Menu
+                            MENU
                         </p>
                     </div>
 
-                    <div class="row">
-                        <h3><b>AUTENTICAÇÃO</b></h3>
+                    <div class="row espacamentoMenor">
+                        <p><b class="titulo">AUTENTICAÇÃO</b></p>
                     </div>
 
                     <div class="fundo_cinza">
                         <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
+                            <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
                                 <label><b>Senha</b></label>
                                 <br><label class="fonte_cinza">********************</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark btn_preto4" onclick="trocarFrame('editarSenha')">ALTERAR SENHA</button>
+                            <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <button type="button" class="btn btn-dark btn_preto" onclick="trocarFrame('editarSenha')">ALTERAR SENHA</button>
                             </div>
                         </div>
                     </div>
@@ -553,7 +619,7 @@
 
                 <!--AUTENTICAÇÃO - REDEFINIR SENHA-->
                 <div id="editarSenha" class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 frame">
-                    <div class="row">
+                    <div class="row espacamentoMenor">
                         <p class="linkVoltarOuMenu" onclick="trocarFrame('autenticacao');adicionarSeletor('menu_autenticacao')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -562,82 +628,84 @@
                         </p>
                     </div>
 
-                    <div class="row blocos">
-                        <h3><b>AUTENTICAÇÃO</b></h3>
+                    <div class="row espacamento espacamentoMenor">
+                        <p><b class="titulo">AUTENTICAÇÃO</b></p>
                     </div>
-    
-                    <div class="fundo_cinza">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Senha atual</label>
-                                <input type="text" class="form-control">
+                    
+                    <form action="" method="">
+                        <div class="fundo_cinza">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="senha" class="form-label">Senha atual</label>
+                                    <input type="text" class="form-control" id="senha">
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label for="nova_senha" class="form-label">Nova senha</label>
+                                    <input type="text" class="form-control" id="nova_senha">
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
+                                    <label>Sua senha deve ter pelo menos:</label>
+                                    <br>
+                                    <br>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                    </svg>
+                                    &nbsp;
+                                    <label>8 caracteres</label>
+                                    <br>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                    </svg>
+                                    &nbsp;
+                                    <label>1 letra minúscula</label>
+                                    <br>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                    </svg>
+                                    &nbsp;
+                                    <label>1 número</label>
+                                    <br>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                    </svg>
+                                    &nbsp;
+                                    <label>1 letra maiúscula</label>         
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <button type="submit" class="btn btn-dark btn_preto" onclick="trocarFrame('autenticacao')">SALVAR SENHA</button>
+                                </div>
                             </div>
                         </div>
-    
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Nova senha</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-    
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 blocos">
-                                <label>Sua senha deve ter pelo menos:</label>
-                                <br>
-                                <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                                </svg>
-                                &nbsp;
-                                <label>8 caracteres</label>
-                                <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                                </svg>
-                                &nbsp;
-                                <label>1 letra minúscula</label>
-                                <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                                </svg>
-                                &nbsp;
-                                <label>1 número</label>
-                                <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                                </svg>
-                                &nbsp;
-                                <label>1 letra maiúscula</label>         
-                            </div>
-                        </div>
-    
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <button type="button" class="btn btn-dark btn_preto4" onclick="trocarFrame('autenticacao')">SALVAR SENHA</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>                
             </div>
         </div>
