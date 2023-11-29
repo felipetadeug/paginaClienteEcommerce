@@ -162,7 +162,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
                                     <label for="email" class="form-label">Email:</b></label>
-                                    <input type="text" class="form-control" id="email">
+                                    <input type="email" class="form-control" id="email">
                                 </div>
                             </div>
     
@@ -281,7 +281,7 @@
                 <!--ENDEREÇO (ADIÇÃO)-->
                 <div id="adicionarEndereco" class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 frame">
                     <div class="row espacamentoMenor">
-                        <p class="linkVoltarOuMenu" onclick="trocarFrame('endereco');adicionarSeletor('menu_endereco')">
+                        <p class="linkVoltarOuMenu" onclick="limparCamposEnderecoAdicionarEndereco();trocarFrame('endereco');adicionarSeletor('menu_endereco')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
@@ -641,14 +641,14 @@
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
                                     <label for="senha" class="form-label">Senha atual</label>
-                                    <input type="text" class="form-control" id="senha">
+                                    <input type="password" class="form-control" id="senha">
                                 </div>
                             </div>
         
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 espacamento">
                                     <label for="nova_senha" class="form-label">Nova senha</label>
-                                    <input type="text" class="form-control" id="nova_senha">
+                                    <input type="password" class="form-control" id="nova_senha">
                                 </div>
                             </div>
         
@@ -715,7 +715,7 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         // Função para buscar o endereço usando o CEP
         function buscarEndereco() {

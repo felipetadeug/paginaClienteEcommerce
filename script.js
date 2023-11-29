@@ -28,3 +28,15 @@ function ocultarMenuMobile(){
     var menuMobile = document.getElementById('menuMobile');
     menuMobile.style.display = 'none';
 }
+
+
+function limparCamposEnderecoAdicionarEndereco() {
+    document.getElementById("cep").value = "";
+    document.getElementById("endereco_cliente").value = "";
+    document.getElementById("numero").value = "";
+    document.getElementById("complemento").value = "";
+    document.getElementById("bairro").value = "";
+    document.getElementById("cidade").value = "";
+    document.getElementById("estado").selectedIndex = 0;
+    document.getElementById("dest").value = "";
+}
